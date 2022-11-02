@@ -1,4 +1,4 @@
-package com.baeldung.json.schema;
+package com.cirb.json.schema;
 
 import java.io.IOException;
 import java.util.Set;

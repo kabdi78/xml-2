@@ -1,21 +1,18 @@
-package com.baeldung.xml.validation;
+package com.cirb.xml.validation;
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
-
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 import javax.xml.XMLConstants;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 
 
 public class XmlValidator {
@@ -41,7 +38,7 @@ public class XmlValidator {
     }
 
     public List<SAXParseException> listParsingExceptions() throws IOException, SAXException {
-        com.baeldung.xml.validation.XmlErrorHandler xsdErrorHandler = new com.baeldung.xml.validation.XmlErrorHandler();
+        XmlErrorHandler xsdErrorHandler = new XmlErrorHandler();
         Validator validator = initValidator(xsdPath);
         validator.setErrorHandler(xsdErrorHandler);
         try {

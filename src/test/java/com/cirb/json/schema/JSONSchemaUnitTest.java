@@ -1,12 +1,9 @@
-package com.baeldung.json.schema;
-
+package com.cirb.json.schema;
 
 import java.io.IOException;
 import java.util.Set;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.util.CollectionUtils;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.networknt.schema.JsonSchema;

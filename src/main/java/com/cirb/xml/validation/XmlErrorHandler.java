@@ -1,10 +1,9 @@
-package com.baeldung.xml.validation;
-
-import org.xml.sax.ErrorHandler;
-import org.xml.sax.SAXParseException;
+package com.cirb.xml.validation;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.SAXParseException;
 
 public class XmlErrorHandler implements ErrorHandler {
 

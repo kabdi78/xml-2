@@ -1,11 +1,9 @@
-package com.baeldung.xml.validation;
+package com.cirb.xml.validation;
 
 import java.io.IOException;
 import org.junit.jupiter.api.Test;
 import org.xml.sax.SAXException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PropositionXmlValidatorUnitTest {

@@ -1,4 +1,4 @@
-package com.baeldung.xml.validation;
+package com.cirb.xml.validation;
 
 public class Proposition {
 
