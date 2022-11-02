@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="proposition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="building" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomFR" type="xs:string">
+              </xs:element>
+              <xs:element name="nomNL" type="xs:string">
+              </xs:element>
+              <xs:element name="area" minOccurs="0" maxOccurs="unbounded">
+                <xs:simpleType>
+                  <xs:restriction base="xs:double">
+                    <xs:minInclusive value="0"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nature" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+              </xs:element>
+              <xs:element name="address">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="street">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:whiteSpace value="collapse"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="streetFrom" type="xs:positiveInteger"/>
+                    <xs:element name="streetTo" type="xs:positiveInteger" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="zip" type="xs:positiveInteger"/>
+                    <xs:element name="city" type="xs:string"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="unit" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nomFR" type="xs:string">
+                    </xs:element>
+                    <xs:element name="nomNL" type="xs:string">
+                    </xs:element>
+                    <xs:element name="area" minOccurs="0" maxOccurs="unbounded">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:double">
+                          <xs:minInclusive value="0"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="nature">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="UN"/>
+                          <xs:enumeration value="UAN"/>
+                          <xs:enumeration value="URL"/>
+                          <xs:enumeration value="URS"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="assignment">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="OFFICE_AND_SERVICE"/>
+                          <xs:enumeration value="SCHOOL"/>
+                          <xs:enumeration value="HEALTHCARE"/>
+                          <xs:enumeration value="CULTURE"/>
+                          <xs:enumeration value="SPORT"/>
+                          <xs:enumeration value="SHOP"/>
+                          <xs:enumeration value="RESTAURANT"/>
+                          <xs:enumeration value="COMMON_HOUSE"/>
+                          <xs:enumeration value="INDIVIDUAL_HOUSE"/>
+                          <xs:enumeration value="NOT_HOUSE"/>
+                          <xs:enumeration value="OTHERS"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<proposition>
+  <building>
+    <nomFR>denominationFr</nomFR>
+    <nomNL>denominationNl</nomNL>
+    <area>250.25</area>
+    <nature>URS</nature>
+    <address>
+      <street>Rue Neuve</street>
+      <streetFrom>10</streetFrom>
+      <!--    <streetTo>14</streetTo>-->
+      <city>Brussel</city>
+      <zip>1000</zip>
+    </address>
+    <unit>
+      <nomFR>unitDenominationFr</nomFR>
+      <nomNL>unitDenominationNl</nomNL>
+      <area>250.21</area>
+      <nature>URS</nature>
+      <assignment>SCHOOL</assignment>
+    </unit>
+    <unit>
+      <nomFR>unitDenominationFr2</nomFR>
+      <nomNL>unitDenominationNl2</nomNL>
+      <area>14</area>
+      <nature>URS</nature>
+      <assignment>SPORT</assignment>
+    </unit>
+  </building>
+  <building>
+    <nomFR>denominationFr2</nomFR>
+    <nomNL>denominationNl2</nomNL>
+    <area>500</area>
+    <nature>URS</nature>
+    <address>
+      <street>Rue Neuve</street>
+      <streetFrom>12</streetFrom>
+      <!--    <streetTo>14</streetTo>-->
+      <zip>1000</zip>
+      <city>Brussel</city>
+    </address>
+  </building>
+</proposition>

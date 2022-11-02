@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Proposition": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "building": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "nomFR": {
+                      "type": "string"
+                    },
+                    "nomNL": {
+                      "type": "string"
+                    },
+                    "area": {
+                      "type": "number",
+                      "minimum": 0,
+                      "exclusiveMinimum": 0
+                    },
+                    "nature": {
+                      "type": "string",
+                      "enum": ["UN", "UAN", "URL","URS"]
+                      },
+                    "address": {
+                      "type": "object",
+                      "properties": {
+                        "street": {
+                          "type": "string"
+                        },
+                        "streetFrom": {
+                          "type": "integer"
+                        },
+                        "streetTo": {
+                          "type": "integer"
+                        },
+                        "zip": {
+                          "type": "integer"
+                        },
+                        "city": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "street",
+                        "streetFrom",
+                        "zip",
+                        "city"
+                      ]
+                    }
+                  },
+                  "anyOf": [
+                    {
+                      "required": [
+                        "nomFR"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "nomNL"
+                      ]
+                    }
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "required": [
+            "building"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "Proposition"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Proposition": [
+    {
+      "building": [
+        {
+          "nomFR": "denominationFR",
+          "nomNL": "denominationNL",
+          "area": 100.21,
+          "nature": "URSSDSDS",
+          "address": {
+            "street": "Rue Neuve",
+            "streetFrom": 10,
+            "streetTo": 12,
+            "zip": 1000,
+            "city": "Bruxelles"
+          }
+        },
+        {
+          "nomFR": "denominationFR",
+          "nomNL": "denominationNL",
+          "area": 100.21,
+          "address": {
+            "street": "Rue Neuve",
+            "streetFrom": 10,
+            "streetTo": 12,
+            "zip": 1000,
+            "city": "Bruxelles"
+          }
+        }
+      ]
+    }
+  ]
+}

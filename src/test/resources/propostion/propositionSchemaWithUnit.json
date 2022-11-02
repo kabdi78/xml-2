@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Proposition": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "buildings": {
+              "type": "array",
+              "description": "List of buildings",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "nomFR": {
+                      "type": "string",
+                      "description": "Name in French of the building"
+                    },
+                    "nomNL": {
+                      "type": "string",
+                      "description": "Name in Dutch of the building"
+                    },
+                    "area": {
+                      "type": "number",
+                      "description": "Area of the building, should be greater than 0",
+                      "minimum": 0,
+                      "exclusiveMinimum": 0
+                    },
+                    "nature": {
+                      "type": "string",
+                      "enum": ["UN", "UAN", "URL","URS"]
+                      },
+                    "address": {
+                      "type": "object",
+                      "properties": {
+                        "street": {
+                          "type": "string"
+                        },
+                        "streetFrom": {
+                          "type": "integer"
+                        },
+                        "streetTo": {
+                          "type": "integer"
+                        },
+                        "zip": {
+                          "type": "integer"
+                        },
+                        "city": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "street",
+                        "streetFrom",
+                        "zip",
+                        "city"
+                      ]
+                    },
+                    "units": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "nomFR": {
+                              "type": "string"
+                            },
+                            "nomNL": {
+                              "type": "string"
+                            },
+                            "area": {
+                              "type": "number",
+                              "minimum": 0,
+                              "exclusiveMinimum": 0
+                            },
+                            "nature": {
+                              "type": "string",
+                              "enum": [
+                                "UN",
+                                "UAN",
+                                "URL",
+                                "URS"
+                              ]
+                            },
+                            "assignment": {
+                              "type": "string",
+                              "enum": [
+                                "OFFICE_AND_SERVICE",
+                                "SCHOOL",
+                                "HEALTHCARE",
+                                "CULTURE",
+                                "SPORT",
+                                "SHOP",
+                                "RESTAURANT",
+                                "COMMON_HOUSE",
+                                "INDIVIDUAL_HOUSE",
+                                "NOT_HOUSE",
+                                "OTHERS"
+                              ]
+                            },
+                            "address": {
+                              "type": "object",
+                              "properties": {
+                                "street": {
+                                  "type": "string"
+                                },
+                                "streetFrom": {
+                                  "type": "integer"
+                                },
+                                "streetTo": {
+                                  "type": "integer"
+                                },
+                                "zip": {
+                                  "type": "integer"
+                                },
+                                "city": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "street",
+                                "streetFrom",
+                                "zip",
+                                "city"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "anyOf": [
+                    {
+                      "required": [
+                        "nomFR"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "nomNL"
+                      ]
+                    }
+                  ],
+                  "additionalProperties": true
+                }
+              ]
+            }
+          },
+          "required": [
+            "buildings"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "Proposition"
+  ]
+}
